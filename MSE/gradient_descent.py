@@ -23,7 +23,7 @@ def g_descent(f_dx, f_dy, i_x, i_y, l_r = 0.01, precision = 0.0001):
         gr_x = f_dx(cur_xy[0], cur_xy[1]) * l_r
         gr_y = f_dy(cur_xy[0], cur_xy[1]) * l_r
         gr_xy = np.array([gr_x, gr_y])
-        cur_xy -= gr_xy * l_r
+        cur_xy -= gr_xy
         xy_list.append(cur_xy)
         it += 1
     print(f'the minimum (x, y): ({cur_xy[0]}, {cur_xy[1]})')
@@ -32,4 +32,4 @@ def g_descent(f_dx, f_dy, i_x, i_y, l_r = 0.01, precision = 0.0001):
 print("f_xy(3, 2) =", f_xy(3, 2))
 print("f_dx(3, 2) =", f_dx(3, 2))
 print("f_dy(3, 2) =", f_dy(3, 2))
-g_descent(f_dx, f_dy, -5, 0.1)
+ = g_descent(f_dx, f_dy, -5, 0.1)

@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-m = (25-22)/(38-22)
-c = 25-(38*m)
+m = (31-22)/(41-22)
+c = 31-(41*m)
 X = [1  ,5  ,15 ,22 ,27 ,38 ,41 ,50]
 Y = [12 ,15 ,13 ,22 ,30 ,25 ,31 ,40]
 
@@ -11,22 +11,24 @@ def error_count(m, c):
     sum_er = 0
     for (x, y_gt) in zip(X,Y):
         y_pd = m * x + c
-        sum_er += pow(y_pd - y_gt, 2)
+        sum_er += (y_pd - y_gt) ** 2
     return (sum_er / len(Y) / 2)
 
-# error = error_count(m, c)  
-# print("m = ", "{:.2f}".format(m), "\nc = ", "{:.2f}".format(c), "\nerror = ", "{:.2f}".format(error))
+error = error_count(m, c)
+def visualize_err():
+    print("m = ", "{:.2f}".format(m))
+    print("c = ", "{:.2f}".format(c))
+    print("error = ", "{:.2f}".format(error))
+    # calculate y = m * x + c
+    line_y = np.array(X) * m + c
 
-# line_y = np.array(X) * m + c
-
-# plt.plot(X,Y, marker='o', label='current points')
-# plt.plot(X,line_y, label='prediction line',color='red')
-# plt.title('MSE')
-# plt.xlabel(X)
-# plt.ylabel(Y)
-# plt.legend()
-
-# plt.show()
+    plt.plot(X,Y, marker='o', label='current points')
+    plt.plot(X,line_y, label='prediction line',color='red')
+    plt.title('MSE')
+    plt.xlabel(X)
+    plt.ylabel(Y)
+    plt.legend()
+    plt.show()
 
 def fun(x):
     return 3 * x ** 2 + 4 * x + 7
@@ -68,5 +70,6 @@ print("f'(1) = ",f_deriv(2))
 
 x_list = g_descent(f_deriv, -6)
 
-visuale(x_list,fun,-8,7)
+# visuale(x_list,fun,-8,7)
+visualize_err()
 
