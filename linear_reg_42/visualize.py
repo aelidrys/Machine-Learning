@@ -6,12 +6,9 @@ from decimal import Decimal, getcontext
 
 def visualize_err(m, c, X, Y):
     # calculate y = m * x + c
-    # X = X * 0.001
-    # Y = Y * 0.001
     line_y = []
     for x in X:
         line_y.append(Decimal(m) * Decimal(x) + c)
-    print(line_y)
     plt.plot(X,Y, marker='o', label='current points')
     plt.plot(X,line_y, label='prediction line',color='red')
     plt.title('MSE')
