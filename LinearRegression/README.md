@@ -5,6 +5,7 @@ Linear Regression is a [supervised learning](https://en.wikipedia.org/wiki/Super
 
 #### example of linear regression usage
 the popular example of linear regression is house price prediction
+
 <img src="https://miro.medium.com/v2/resize:fit:1024/0*YMZOAO8QE4bZ4_Rk.jpg" width="500">
 
 
