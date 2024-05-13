@@ -2,6 +2,12 @@
 ### what is linear regression?
 Linear Regression is a [supervised learning](https://en.wikipedia.org/wiki/Supervised_learning) algorithm in machine learning, which is widely used for solving regression problems. Regression is a type of machine learning problem where the goal is to predict a continuous output variable based on one or more input variables.
 
+<style>
+img{
+    width: 80%;
+}
+</style>
+
 #### example of linear regression usage
 the popular example of linear regression is house price prediction
 ![](https://miro.medium.com/v2/resize:fit:1024/0*YMZOAO8QE4bZ4_Rk.jpg)
