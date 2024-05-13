@@ -4,7 +4,7 @@ Linear Regression is a [supervised learning](https://en.wikipedia.org/wiki/Super
 
 <style>
 img{
-    width: 80%;
+    width: 50%;
 }
 </style>
 
