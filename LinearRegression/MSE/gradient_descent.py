@@ -12,7 +12,10 @@ def f_dx(x, y):
 def f_dy(x, y):
     return 4 * y ** 3 - 4 * x
 
-def g_descent(f_dx, f_dy, i_x, i_y, l_r = 0.01, precision = 0.0001):
+x_learned = 0
+y_learned = 0
+
+def g_descent(f_dx, f_dy, i_x, i_y, l_r = 0.0001, precision = 0.0001):
     cur_xy = np.array([i_x, i_y])
     last_xy = np.array([float('inf'), float('inf')])
     xy_list = [cur_xy]
@@ -27,9 +30,9 @@ def g_descent(f_dx, f_dy, i_x, i_y, l_r = 0.01, precision = 0.0001):
         xy_list.append(cur_xy)
         it += 1
     print(f'the minimum (x, y): ({cur_xy[0]}, {cur_xy[1]})')
+    x_learned = cur_xy[0]
+    y_learned = cur_xy[1]
     return xy_list
 
-print("f_xy(3, 2) =", f_xy(3, 2))
-print("f_dx(3, 2) =", f_dx(3, 2))
-print("f_dy(3, 2) =", f_dy(3, 2))
- = g_descent(f_dx, f_dy, -5, 0.1)
+
+list_xy = g_descent(f_dx, f_dy, 10, 12.2)

@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import sys
-sys.path.append('/nfs/homes/aelidrys/Desktop/ML/linear_reg_42')
+sys.path.append('/nfs/homes/aelidrys/Desktop/ml/linear_reg_42')
 from visualize import *
 
 m = (31-22)/(41-22)
@@ -19,20 +19,6 @@ def error_count(m, c):
     return (sum_er / len(Y) / 2)
 
 error = error_count(m, c)
-# def visualize_err():
-#     print("m = ", "{:.2f}".format(m))
-#     print("c = ", "{:.2f}".format(c))
-#     print("error = ", "{:.2f}".format(error))
-#     # calculate y = m * x + c
-#     line_y = np.array(X) * m + c
-
-#     plt.plot(X,Y, marker='o', label='current points')
-#     plt.plot(X,line_y, label='prediction line',color='red')
-#     plt.title('MSE')
-#     plt.xlabel(X)
-#     plt.ylabel(Y)
-#     plt.legend()
-#     plt.show()
 
 def fun(x):
     return 3 * x ** 2 + 4 * x + 7
