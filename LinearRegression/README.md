@@ -14,6 +14,6 @@ Linear Regression is a [supervised learning](https://en.wikipedia.org/wiki/Super
 <img src="https://miro.medium.com/v2/resize:fit:1400/0*St4CVriw9ZsS3FJR.png" width="800">
 
 
-##### allmost of the time we can't get a line that holds all points of the data set. for this we define a error function or cost function that count the average error value for this line, the error is the difference between the real house price and the predicted house price
+##### allmost of the time we can't get a line that holds all points of the data set. for this we define a error function or cost function that count the average value of error for this line, the error is the difference between the real house price and the predicted house price
 
 <img src="https://miro.medium.com/v2/resize:fit:1400/1*jmd_lPcwkZ6QByMfv2itXg.png" width="800">
