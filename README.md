@@ -1,4 +1,4 @@
 # Machine-Learning
 Machine Learning
 
-[Linear Regression](LinearRegression/linear_regression.md)
+[Linear Regression](https://github.com/aelidrys/Machine-Learning/tree/main/LinearRegression/linear_regression.md)
