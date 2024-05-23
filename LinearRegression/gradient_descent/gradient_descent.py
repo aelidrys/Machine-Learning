@@ -3,35 +3,30 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from numpy.linalg import norm
 
-X = np.array([2.3,8.6,45,0.1])
-Y = np.array([5,46,280,1.211])
+X = np.array([[1, 2.3],
+              [1, 8.6],
+              [1, 45],
+              [1, 0.1]])
 
-def y_predicted(x, m, c):
-    y_p = m * x + c
-    return y_p
+Y = np.array([[5],[46],[280],[1.211]])
+
 
 def cost():
 
-    def cost_f(m,c):
-        for x,y in zip(X, Y):
-            y_p = y_predicted(x,m,c)
-            sum += (y_p - y) ** 2
-        return sum / 2 * len(X)
+    def cost_f(X, Y, W):
+        exampels = X.shape[0]
+        pred = np.dot(X, W)
+        error = pred - Y 
+        # cost = np.sum(error ** 2 / 2 * exampels)
+        cost = error.T.dot(error) / 2 * exampels
 
-    def cost_dm(m, c):
-        for x,y in zip(X, Y):
-            y_p = y_predicted(x,m,c)
-            sum += (y_p - y) * x
-        return sum / len(X)
+    def f_derive(X, Y, W):
+        exampels = X.shape[0]
+        pred = np.dot(X, W)
+        error = pred - Y
+        gr = X.T @ error / exampels # X.T.dot(error) / exampels
 
-    def cost_dc(m, c):
-        for x,y in zip(X, Y):
-            y_p = y_predicted(x,m,c)
-            sum += (y_p - y)
-        return sum / len(X)
-    
-    def d_cost(m,c)
-        return np.array([cost_dm(m,c), cost_dc(m, c)])
+
 
 def gradient_descent(d_functs, init, lr=0.001, pr=0.0000001):
     cur_p = np.array(init)
