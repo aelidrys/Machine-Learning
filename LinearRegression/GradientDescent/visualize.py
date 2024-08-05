@@ -7,10 +7,11 @@ from decimal import Decimal, getcontext
 def visualize_err(m, c, X, Y):
     # calculate y = m * x + c
     line_y = []
-    for x in X:
-        line_y.append(Decimal(m) * Decimal(x) + c)
-    plt.plot(X,Y, marker='o', label='current points')
-    plt.plot(X,line_y, label='prediction line',color='red')
+    X1 = X[:, 1] 
+    for x in X1:
+        line_y.append(m * x + c)
+    plt.scatter(X1,Y)
+    plt.plot(X1,line_y, label='prediction line',color='red')
     plt.title('MSE')
     plt.xlabel("mileage")
     plt.ylabel("price")
