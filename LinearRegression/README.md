@@ -1,6 +1,6 @@
 # Linear Regression
 ## what is linear regression?
-Linear Regression is a [supervised learning](https://en.wikipedia.org/wiki/Supervised_learning) algorithm in machine learning, which is widely used for solving regression problems. Regression is a type of machine learning problem where the goal is to predict a continuous output variable based on one or more input variables.
+Linear Regression is a [supervised learning](https://en.wikipedia.org/wiki/Supervised_learning) algorithm in machine learning, which is widely used for solving regression problems. Regression is a type of machine learning problems where the goal is to predict a continuous output variable based on one or more input variables.
 
 
 ### example of linear regression usage
@@ -13,8 +13,17 @@ Linear Regression is a [supervised learning](https://en.wikipedia.org/wiki/Super
 
 <img src="https://miro.medium.com/v2/resize:fit:1400/0*St4CVriw9ZsS3FJR.png" width="800" height="400">
 
-##### allmost of the time we can't get a line that holds all points of the data set. for this we define a error function or cost function that count the average value of error for this line, the error is the difference between the real house price and the predicted house price, as we said previous the predicted price is `y_p = m*x + c` so `error = (y_p - y_r)^2` mean that `error = ((m*x+c)-y_r)^2` `y_r` is the real value of price, we use squere `^2` for avoid negative valuse, to count the average of error value we aplly this error function over all points of data, the exprission of average also named mean squared error  is looks like in the image bellow
+<h5>allmost of the time we can't get a line that holds all points of the data set.</h5>
+<h5>for this we define a error function or cost function that count the average value of error for this line, the error is the difference between the real house price <span style='color:blue;'>y_r</span> and the predicted house price <span style='color:blue;'>y_p</sapn></h5>
+
+##### `error = (y_p - y_r)^2`
+##### `y_p = m*x + c`
+##### `error = ((m*x+c)-y_r)^2`
+
+##### We use the exponent `^2` to avoid a negative value because sometimes the difference `y_p - y_r` is positive and sometimes it is negative, to count the average of error value we aplly this error function over all points of data, the exprission of average also named mean squared error  is looks like in the image bellow
 
 <img src="https://i.sstatic.net/MKVCl.png" width="600">
+
+<h5>we compute the error in eash point and sume the errors after that we divides the sume of errors over the number of points</h5>
 
 <img src="https://miro.medium.com/v2/resize:fit:1400/1*jmd_lPcwkZ6QByMfv2itXg.png" width="800" height="400">
