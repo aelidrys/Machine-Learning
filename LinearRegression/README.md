@@ -28,6 +28,8 @@ Linear Regression is a [supervised learning](https://en.wikipedia.org/wiki/Super
 
 <img src="https://i.sstatic.net/MKVCl.png" width="500">
 
-<h5>we compute the error in eash point and sume the errors after that we divides the sume of errors over the number of points</h5>
+<h5>we compute the error in eash point and sume the errors after that we divides the sume of errors over the number of points, finily we get the average value of error for our line</h5>
+
+<!-- <h5>now we can compute the cost or error of any generated line the next steap is to find the line that givs the minimum error</h5> -->
 
 
