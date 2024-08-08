@@ -24,7 +24,7 @@ Linear Regression is a [supervised learning](https://en.wikipedia.org/wiki/Super
 
 <img src="https://miro.medium.com/v2/resize:fit:1400/1*jmd_lPcwkZ6QByMfv2itXg.png" width="500">
 
-##### to count the average of error value we aplly this error function over all points of data, the exprission of average also named mean squared error  is looks like in the image bellow
+##### to count the average value of error we aplly this error function over all points of data, the exprission of average also named mean squared error  is looks like in the image bellow
 
 <img src="https://i.sstatic.net/MKVCl.png" width="500">
 
