@@ -14,8 +14,9 @@ Linear Regression is a [supervised learning](https://en.wikipedia.org/wiki/Super
 
 <img src="img/linear_reg.png" width="500">
 
-#####  each line represented by m and c, m the slope defined by `m =  (y₂ - y₁) / (x₂ - x₁)` and c the intercept of the line with y axis
-##### each line allows us to predict the price of each house, denoted by `x`, based on its size, denoted by `y`. by using the equation of the line `y = m*x + c`
+##### we have alotof lines. each line represented by m and c, m the slope defined by `m =  (y₂ - y₁) / (x₂ - x₁)` and c the intercept of the line with y axis
+##### each line allows us to predict the price of each house, denoted by `x`, based on its size, denoted by `y`. by using the equation of the line `y = m*x + c`, but the predicted price may not be valid depends on the ability of this line to discribe the data, for example the orange line.
+##### In the upper figure there are different lines and the best line is the red line. We choose this line by seeing the figure and comparing the lines, but the computer cannot do this, there are a set of complex operations that the computer performs to choose the best line.
 
 <!-- <img src="img/linear_reg.png" width="500"> -->
 
