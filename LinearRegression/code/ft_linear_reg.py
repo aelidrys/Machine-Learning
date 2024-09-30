@@ -1,9 +1,10 @@
 import pandas as pd
 import numpy as np
 from visualize import *
-from gradient_descent import grad_descent, f_derive
+from gradient_descent import grad_descent, f_derive, cost_f
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from sklearn.linear_model import LinearRegression
 
 
 file_name = "/nfs/homes/aelidrys/Desktop/ml/LinearRegression/linear_regr_42/data.csv"
@@ -40,8 +41,6 @@ init_wights = np.random.rand(2,1)
 # launch gradient descent the learn the optimal wights
 wights_scld = grad_descent(X_scld, Y_scld,
         init_wights, lr=1, pr=0.000000001)
-
-# unscaled the wights to be compatible with the raw data
 wights = unscld_wights(wights_scld)
 m = wights[1]
 c = wights[0]
@@ -52,10 +51,16 @@ c = wights[0]
 ## display an assist digram
 # visualize(m, c, X_raw, Y_raw)
 
+# sklearn Model
+reg = LinearRegression().fit(X_scld, Y_scld)
+print(reg.coef_)
+wights = unscld_wights(reg.coef_[0])
+m = wights[1]
+c = wights[0]
 
 
 
-##### testing #####
+#### testing #####
 km = np.array(data_csv['km']).reshape(24, 1)
 price = np.array(data_csv['price']).reshape(24, 1)
 data = np.hstack([km, price])
@@ -70,13 +75,13 @@ MAPE = np.mean(np.abs((t_gt - t_pr) / t_gt)) * 100
 precision = 100 - MAPE
 print('MAPE: ', MAPE)
 print('precision: ', precision)
-print('\n\n')
+print('\n')
 
 
 
 
 
 
-mileage = input("enter the mileage: ")
-price = float(mileage) * m + c
-print("price = ", f"{price[0]:,}")
+# mileage = input("enter the mileage: ")
+# price = float(mileage) * m + c
+# print("price = ", f"{price[0]:,}")

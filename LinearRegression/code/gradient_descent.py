@@ -31,5 +31,6 @@ def grad_descent(X, Y, W1, lr=0.01, pr=0.0001):
         cur_p = (cur_p - gr) * lr
         list_lrn.append(cur_p)
         iter += 1
+    print('cost function: ', cost_f(X, Y, cur_p))
     return cur_p
 

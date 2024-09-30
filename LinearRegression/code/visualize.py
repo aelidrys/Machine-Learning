@@ -24,3 +24,5 @@ def visualize(m, c, X, Y):
 
 
 
+
+
