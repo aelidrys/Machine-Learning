@@ -19,7 +19,7 @@ def f_derive(X, Y, W):
 
 
 
-def grad_descent(X, Y, W1, lr=0.01, pr=0.0001):
+def grad_descent(X, Y, W1, lr=0.01, pr=0.000000001):
     cur_p = W1
     last_p = cur_p + 100
     list_lrn = [cur_p]
@@ -31,6 +31,7 @@ def grad_descent(X, Y, W1, lr=0.01, pr=0.0001):
         cur_p = (cur_p - gr) * lr
         list_lrn.append(cur_p)
         iter += 1
-    print('cost function: ', cost_f(X, Y, cur_p))
+    cost = cost_f(X, Y, cur_p)[0][0]
+    print(f'cost function: {cost:.2f}%')
     return cur_p
 
