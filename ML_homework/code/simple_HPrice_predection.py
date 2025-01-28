@@ -29,11 +29,15 @@ X_test_scled = MinMaxScaler().fit_transform(X_test)
 X_test_scled = np.hstack([ones, X_test_scled])
 target = np.array(df_target[['SalePrice']])
 Pr_target = reg.predict(X_test_scled)
-Error = (Pr_target - target)
-cost = Error.T.dot(Error) / target.shape[0]
-print('prediction: ', Pr_target) 
-print('ERROR: ', cost) 
+print('prediction: ', Pr_target)
+ 
+# Error = (Pr_target - target)
+# cost = Error.T.dot(Error) / (target.shape[0]*2)
+# print('cost: ', cost)
 
+MAPE = np.mean(np.abs((Pr_target - target) / target)) * 100
+precision = 100 - MAPE
+print(f'MAPE: {MAPE:.2f}%')
 
 
 
